@@ -4,19 +4,22 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html ng-app="">
+<html ng-app="demoApp">
     <head>
         <title>Angluar JS</title>
      
     </head>
-    <body ng-init="customers=[{'name':'John Smith','city':'Phoenix'},{'name':'John Doe','city':'New York'},{'name':'Jane Doe','city':'San Fransico'}]">
+    <body>
        
+        
+        <div ng-controller="simpleController">
         
            <input type="text" ng-model="name"><br><br>Hey {{name}}
              <ul>
                  <li ng-repeat="cust in customers |filter:name | orderBy:'city'">{{cust.name | uppercase}} - {{cust.city | lowercase}}</li>
             </ul>
-           
+        </div>   
             <script src="angular.min.js"></script>
+            <script src="js/Controller.js"></script>
     </body>
 </html>
