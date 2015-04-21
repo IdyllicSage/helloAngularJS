@@ -10,9 +10,14 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <script src="angular.min.js"></script>
-        <div class="container">
-            <input type="text" ng-model="name"><br><br>Hey {{name}}</div>
+    <body ng-init="names=['John Smith','John Doe','Jane Doe']">
+       
+        
+           <input type="text" ng-model="name"><br><br>Hey {{name}}
+             <ul>
+                 <li ng-repeat="neo in names">{{neo}}</li>
+            </ul>
+           
+            <script src="angular.min.js"></script>
     </body>
 </html>
